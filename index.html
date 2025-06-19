@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        
+        <div class="converter">
+            <input type="text" id="temp-input" placeholder="Enter temperature" />
+
+            <div class="scale-selectors">
+                <div id="from-selector" class="selector">
+                    <span class="scale-option active" data-scale="celsius">°C</span>
+                    <span class="scale-option" data-scale="fahrenheit">°F</span>
+                    <span class="scale-option" data-scale="kelvin">K</span>
+                </div>
+
+                <button id="swap-btn">⇌</button>
+
+                <div id="to-selector" class="selector">
+                    <span class="scale-option" data-scale="celsius">°C</span>
+                    <span class="scale-option active" data-scale="fahrenheit">°F</span>
+                    <span class="scale-option" data-scale="kelvin">K</span>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="convert-btn">Convert</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+
+            <div id="result-container" class="result-box">
+                <div id="result-value" class="result-value"></div>
+                <div id="result-formula" class="result-formula"></div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h2>Conversion History</h2>
+            <div id="history-container"></div>
+            <button id="clear-all-btn" style="display: none;">Clear All</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

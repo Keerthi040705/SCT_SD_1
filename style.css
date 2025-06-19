@@ -1,0 +1,146 @@
+/* Background animation */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #74b0eb, #899cef, #fd9be1, #a6c1ee);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Main container with glass effect */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    color: #fff;
+}
+
+/* Titles */
+h1, h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Input */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+/* Scale selectors */
+.scale-selectors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.selector {
+    display: flex;
+    gap: 10px;
+}
+
+.scale-option {
+    padding: 10px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.scale-option.active {
+    background: #ffffff;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #ffffff;
+    color: #333;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px 5px 0 0;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: #ffddcc;
+    transform: scale(1.05);
+}
+
+/* Result */
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    display: none;
+    color: #fff;
+}
+
+.result-box.show {
+    display: block;
+}
+
+.result-box.error {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+.result-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.result-formula {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #ddd;
+}
+
+/* History */
+.history-section {
+    margin-top: 30px;
+}
+
+.history-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    color: #eee;
+    font-size: 14px;
+}
+
+.empty-state {
+    color: #ccc;
+    font-style: italic;
+    text-align: center;
+}
+
+
